@@ -1,0 +1,214 @@
+@import "./base.css";
+@import "./components/buttons.css";
+
+/*:root{
+    --svg-icon-stroke : #ffffff
+}*/
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3c3c3caa;
+    border-radius: 25px;
+}
+
+a {
+    color: inherit;
+}
+a:visited {
+    color: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+.dark-theme {
+    /*background-color: #0a1364;*/
+
+    /*background: url("../images/min-dark-gradient.svg") no-repeat center center fixed;*/
+    background: var(--dark-green-1);
+    animation: gradient 60s ease infinite;
+    /*  background: black;*/
+    -webkit-background-size: 400% 400%;
+    -moz-background-size: 400% 400%;
+    -o-background-size: 400% 400%;
+    background-size: 400% 400%;
+    color: var(--light-1);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.down-arrow {
+    animation: down-arrow 3s ease infinite;
+    z-index: -1;
+}
+
+@keyframes down-arrow {
+    0% {
+        transform: translate3d(0px, 0px, 0px) scale3d(1,1,1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        transform-style: preserve-3d;
+        will-change: transform;
+    }
+
+    50% {
+        transform: translate3d(0px, 10px, 0px) scale3d(1,1,1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        transform-style: preserve-3d;
+        will-change: transform;
+    }
+
+    100% {
+        transform: translate3d(0px, 0px, 0px) scale3d(1,1,1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        transform-style: preserve-3d;
+        will-change: transform;
+    }
+}
+
+.light-theme {
+    /*background: url("../images/light-gradient.svg") no-repeat center center fixed;*/
+    background: var(--light-green-1);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: var(--dark-1);
+}
+
+.light-theme,
+.dark-theme {
+    /*transition: 0.5s;*/
+    opacity: 1;
+}
+
+.no-scroll {
+    overflow: hidden;
+    scrollbar-width: none; /* Masquer les barres de défilement pour les navigateurs prenant en charge 'scrollbar-width' */
+    -ms-overflow-style: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.no-scroll::-webkit-scrollbar {
+    overflow: hidden;
+    scrollbar-width: none; /* Masquer les barres de défilement pour les navigateurs prenant en charge 'scrollbar-width' */
+    -ms-overflow-style: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+/* Fonts */
+
+/* --Gotham-- */
+
+@font-face {
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("../fonts/Gotham/Gotham-Medium.ttf") format("ttf");
+}
+
+/* --Poppins-- */
+
+@font-face {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url("../fonts/Poppins/Poppins-Thin.ttf") format("ttf"),
+    url("../fonts/Poppins/Poppins-Thin.woff") format("woff");
+}
+
+@font-face {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url("../fonts/Poppins/Poppins-ExtraLight.ttf") format("ttf"),
+    url("../fonts/Poppins/Poppins-ExtraLight.woff") format("woff");
+}
+
+@font-face {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("../fonts/Poppins/Poppins-Light.ttf") format("ttf"),
+    url("../fonts/Poppins/Poppins-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/Poppins/Poppins-Regular.ttf") format("ttf"),
+    url("../fonts/Poppins/Poppins-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("../fonts/Poppins/Poppins-Medium.ttf") format("ttf"),
+    url("../fonts/Poppins/Poppins-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../fonts/Poppins/Poppins-Bold.ttf") format("ttf"),
+    url("../fonts/Poppins/Poppins-Bold.woff") format("woff");
+}
+
+
+@font-face {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("../fonts/Poppins/Poppins-ExtraBold.ttf") format("ttf"),
+    url("../fonts/Poppins/Poppins-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("../fonts/Poppins/Poppins-Black.ttf") format("ttf"),
+    url("../fonts/Poppins/Poppins-Black.woff") format("woff");
+}

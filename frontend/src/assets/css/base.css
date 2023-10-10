@@ -1,0 +1,30 @@
+/* Coolors Palette #1 */
+:root {
+  --dark-1: #1F2421;
+  --light-1: #DCE1DE;
+  --light-green-1: #9CC5A1;
+  --green-1: #49A078;
+  --dark-green-1: #216869;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Gotham, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+  Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("Gotham/Gotham-Medium.ttf") format("ttf");
+}
