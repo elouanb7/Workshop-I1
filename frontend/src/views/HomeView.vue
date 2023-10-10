@@ -15,7 +15,7 @@ import SkewCard from "@/components/cards/SkewCard.vue";
     <div class="redirect-meet">
       <span style="font-weight: 300; max-width: 400px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, necessitatibus.</span>
       <div class="btn-container">
-        <RouterLink to="/" class="btn">Prendre un RDV</RouterLink>
+        <RouterLink to="/book" class="btn">Prendre un RDV</RouterLink>
       </div>
     </div>
 
