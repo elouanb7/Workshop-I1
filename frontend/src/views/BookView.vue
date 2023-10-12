@@ -1,5 +1,4 @@
 <script>
-import rdv from '@/api/rdv.js';
 export default {
   name: "Card",
   data() {
@@ -49,15 +48,11 @@ export default {
       default: "10vh"
     },
   },
-  created() {
-    rdv.getRendezVous()
-        .then((data) => {
-          this.rendezVous = data;
-        })
-        .catch((error) => {
-          console.error('Erreur lors de la récupération des rendez-vous :', error);
-        });
-  },
+  computed: {
+    meetList() {
+        return this.$store.rdv.getRdv()
+    }
+  }
 };
 
 </script>
@@ -74,7 +69,7 @@ export default {
         </li>
       </ul>
     </div>
-    {{rendezVous}}
+    {{meetList}}
   </div>
 </template>
 
