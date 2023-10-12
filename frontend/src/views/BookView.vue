@@ -105,6 +105,7 @@ export default {
     <div class="appointments-container">
       <ul class="slots">
         <li class="slot" v-for="slot in meetList.rdv">
+          <RouterLink :to="{ name: 'bookform', params: { id: slot.id } }">
           {{ formatDate(slot.date_debut) }}
           <small>
           {{ new Date(slot.date_debut).getHours() }}:{{ new Date(slot.date_debut).getMinutes() }} -
@@ -112,6 +113,7 @@ export default {
           </small>
           <br>
           <span class="places">Nombre de places restantes : {{slot.nb_place - slot.patients.length}}</span>
+          </RouterLink>
         </li>
       </ul>
     </div>
