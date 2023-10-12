@@ -5,11 +5,7 @@ export const useRdvStore = defineStore('rdv', {
     state: () => ({
         rdv: null,
     }),
-    getters: {
-        getRdv() {
-            return this.rdv
-        },
-    },
+    getters: {},
     actions: {
         async getRdv() {
             // Clear the existing rdv data (if any) to force a new fetch
