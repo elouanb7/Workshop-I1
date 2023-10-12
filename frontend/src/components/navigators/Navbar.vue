@@ -2,8 +2,9 @@
   <nav class="navbar">
     <div class="nav-links" @click="toggleMobileMenu">
       <ul>
-        <li><a href="">Accueil</a></li>
-        <li><a href="#about">Mes Rendez-Vous</a></li>
+        <li><RouterLink to="/">Accueil</RouterLink></li>
+        <li><RouterLink to="/book">Prendre un Rendez-Vous</RouterLink></li>
+        <li><RouterLink to="/">Mes Rendez-Vous</RouterLink></li>
         <li><a @click="toggleTheme">
           <SvgIcon class="toggleTheme" :name="currentTheme"/>
         </a></li>

@@ -52,8 +52,9 @@ const themeClass = computed(() => {
     padding-inline: 100px;
     padding-top: 50px;
     padding-bottom: 50px;
-    height: 100vh;
-  }
+    height: auto;
+    min-height: 100vh;
+    }
 }
 
 </style>
